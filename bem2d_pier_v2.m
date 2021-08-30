@@ -47,7 +47,7 @@ k = sqrt(-1j*omega*mu*sigma);
 
 Je = 1;
 
-int_2element = @(p,e,i_to,i_from,k) int_3points_v2( ...
+int_2element = @(p,e,i_to,i_from,k) int_3points_v2(...
 [(p(e(i_to,1),1)+p(e(i_to,2),1))./2 (p(e(i_to,1),2)+p(e(i_to,2),2))./2], ...
 [p(e(i_from,1),1) p(e(i_from,1),2)], ...
 [p(e(i_from,2),1) p(e(i_from,2),2)], k);
@@ -71,7 +71,7 @@ for j=1:n
         U(j,idx(i,:)) = U(j,idx(i,:)) + u;
         V(j,idx(i,:)) = V(j,idx(i,:)) + v;
         F(j,i) = F(j,i) + mu*Je*f1;
-        F2(j,i) = F2(j,i) + mu*Je*f2;
+	F2(j,i) = F2(j,i) + mu*Je*f2;
     end
 
     H(j,idx(j,:)) = H(j,idx(j,:)) + [1/4 1/4];
