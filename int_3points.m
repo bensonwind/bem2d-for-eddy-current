@@ -57,8 +57,6 @@ function [h,g,u,v,f1,f2] = int_3points_v2(P0,P1,P2,k)
         h1=wf'*(psi(:,1).*dG1dn.*jacobi);
         h2=wf'*(psi(:,2).*dG1dn.*jacobi);
     end
-	
-%        h3=wf'*(psi(:,3).*dG0dn);
 
 	g1=wf'*(psi(:,1).*G1.*jacobi);
 	g2=wf'*(psi(:,2).*G1.*jacobi);
